@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bright's Food Paradise</title>
+  <style>
+    /* Import Melyan Font */
+    @font-face {
+      font-family: 'Melyan';
+      src: url('melyan.ttf') format('truetype'); /* Ensure the font file is available */
+    }
+
+    /* General Styling */
+    body {
+      background-image: url('Dark_Cake.jpg'); /* Ensure this file exists */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth; /* Smooth scrolling */
+    }
+
+    /* Header Styling */
+    header {
+      color: rgb(251, 223, 223);
+      text-align: center;
+      padding: 50px 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-family: 'Melyan', serif; /* Applying Melyan Font */
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    /* Button Styling - Top Right Corner */
+    .button-container {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    button {
+      background-color: black;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 12px 24px;
+      border: 2px solid white;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+
+    /* Dropdown Menu Styling */
+    #options {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      display: none;
+      width: 150px;
+      text-align: left;
+    }
+
+    #options ul {
+      list-style: none;
+      padding: 10px;
+      margin: 0;
+    }
+
+    #options li {
+      padding: 8px;
+    }
+
+    #options a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      display: block;
+      padding: 5px;
+    }
+
+    #options a:hover {
+      background: #f1f1f1;
+    }
+
+    /* Main Content Section */
+    .main-section {
+      text-align: center;
+      padding: 30px;
+    }
+
+    /* Featured Dishes - Centered & Even Spacing */
+    .dishes-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .dish {
+      width: 250px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .dish img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .dish h3 {
+      margin: 10px;
+      font-size: 1.5rem;
+      color: #444;
+    }
+
+    .dish p {
+      margin: 10px;
+      color: #666;
+    }
+
+    /* Blog Section */
+    .blog-section {
+      background: white;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .blog {
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    .blog h2 {
+      color: #333;
+    }
+
+    .blog p {
+      color: #666;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Bright's Food Paradise</h1>
+    <p>Delicious recipes and mouthwatering dishes, all in one place!</p>
+  
+    <!-- Button and Dropdown -->
+    <div class="button-container">
+      <button onclick="toggleOptions()">Recipes</button>
+      <div id="options">
+        <ul>
+          <li><a href="#blogs">Blogs</a></li> <!-- Scrolls down to Blogs -->
+          <li><a href="#option2">Indian</a></li>
+          <li><a href="#option2">Italian</a></li>
+          <li><a href="#option3">About us</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Section -->
+  <div class="main-section">
+    <h2>Featured Dishes</h2>
+
+    <div class="dishes-container">
+      <!-- Dish 1 -->
+      <div class="dish">
+        <img src="dish1.jpg" alt="Classic Spaghetti">
+        <h3>Classic Spaghetti</h3>
+        <p>Rich tomato sauce with a sprinkle of basil.</p>
+      </div>
+
+      <!-- Dish 2 -->
+      <div class="dish">
+        <img src="dish2.jpg" alt="Cheesy Pizza">
+        <h3>Cheesy Pizza</h3>
+        <p>Perfectly baked with a crispy crust.</p>
+      </div>
+
+      <!-- Dish 3 -->
+      <div class="dish">
+        <img src="dish3.jpg" alt="Vibrant Salad">
+        <h3>Vibrant Salad</h3>
+        <p>Fresh and healthy with seasonal greens.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Section -->
+  <div id="blogs" class="blog-section">
+    <h2>Latest Blogs</h2>
+
+    <div class="blog">
+      <h2>5 Secrets to the Perfect Pasta</h2>
+      <p>Learn how to make restaurant-quality pasta at home with these five easy tips...</p>
+    </div>
+
+    <div class="blog">
+      <h2>The Ultimate Pizza Guide</h2>
+      <p>Everything you need to know about making the best homemade pizza, from dough to toppings...</p>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 Bright's Food Paradise | Taste made with love
+    </p>
+  </footer>
+
+  <script>
+    // JavaScript to Show/Hide Options Dropdown
+    function toggleOptions() {
+      const optionsDiv = document.getElementById('options');
+      optionsDiv.style.display = (optionsDiv.style.display === 'block') ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
